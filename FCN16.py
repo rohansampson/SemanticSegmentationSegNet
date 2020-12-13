@@ -204,6 +204,7 @@ def forward(img):
     
     return seg_soft
 
+
 def categorical_dice(mask1, mask2, label_class=1):
     """
     Dice score of a specified class between two volumes of label masks.
@@ -218,8 +219,8 @@ def categorical_dice(mask1, mask2, label_class=1):
     Returns:
         volume_dice
     """
-    mask1_pos = (mask1 == label_class).astype(np.float32)
-    mask2_pos = (mask2 == label_class).astype(np.float32)
+    mask1_pos = (mask1 == label_class).numpy()
+    mask2_pos = (mask2 == label_class).numpy()
     dice = 2 * np.sum(mask1_pos * mask2_pos) / (np.sum(mask1_pos) + np.sum(mask2_pos))
     return dice
 
