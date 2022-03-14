@@ -24,6 +24,9 @@ Classification Accuracy
 Best Performance:
 
   Epoch 99/100
+  
   Train loss:  0.7521338015794754
+  
   Validation loss:  0.7804208397865295
+  
   Dice score:  0.877760516852967
